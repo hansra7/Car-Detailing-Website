@@ -1,0 +1,39 @@
+.galleryContainer {
+  width: 90%; /* Wider container */
+  max-width: 1200px;
+  margin: 40px auto; /* Center and add spacing */
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galleryTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Grid for images */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+  gap: 20px; /* Space between images */
+  justify-items: center; /* Center images in their grid cells */
+}
+
+.imageItem {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

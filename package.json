@@ -1,0 +1,49 @@
+{
+  "name": "react-car-detailing-project-final",
+  "version": "1.0.0",
+  "description": "Luxe Pro Auto Detailing - A Next.js-based website for a small car detailing business. The site features a sleek sidebar navigation with sections for Interior and Exterior Detailing, a Gallery, and Contact information, offering a user-friendly interface for potential clients.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansra7/Luxe-Pro-Car-Detailing-Website.git"
+  },
+  "keywords": [
+    "car",
+    "detailing",
+    "auto",
+    "Luxe",
+    "Pro",
+    "car wash",
+    "Next.js",
+    "React",
+    "sidebar navigation",
+    "auto services",
+    "detailing services",
+    "website"
+  ],
+  "author": "Manraj Hansra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hansra7/Luxe-Pro-Car-Detailing-Website/issues"
+  },
+  "homepage": "https://github.com/hansra7/Luxe-Pro-Car-Detailing-Website#readme",
+  "dependencies": {
+    "next": "^15.0.3",
+    "nodemailer": "^6.9.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-image-lightbox": "^5.1.4",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47"
+  }
+}

@@ -1,0 +1,99 @@
+/* Form Container */
+.formContainer {
+  margin-top: 30px;
+  padding: 40px; /* Add padding inside the form container */
+  background-color: #f9f9f9; /* Light gray for contrast */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 800px; /* Increased width for better readability */
+  margin: 0 auto; /* Center the form container horizontally */
+  box-sizing: border-box;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+  gap: 25px; /* Add spacing between fields */
+}
+
+/* Labels */
+.formLabel {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  gap: 8px; /* Add slight spacing between label and input */
+}
+
+/* Inputs and Textarea */
+.formInput,
+.formTextarea {
+  width: 100%; /* Full width for inputs and textarea */
+  padding: 15px; /* Increased padding for better usability */
+  font-size: 1.1rem; /* Slightly larger font size */
+  border: 1px solid #ccc; /* Subtle border for inputs */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: #0070f3; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 112, 243, 0.3); /* Subtle glow on focus */
+}
+
+.formTextarea {
+  min-height: 180px; /* Taller height for textarea */
+  resize: none; /* Disable resizing for consistent layout */
+}
+
+/* Submit Button */
+.submitButton {
+  padding: 18px; /* Add more padding for larger button */
+  font-size: 1.3rem; /* Larger button text */
+  font-weight: bold;
+  text-align: center;
+  background-color: #0070f3; /* Bright blue button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: scale(1.03); /* Slight zoom effect */
+}
+
+.submitButton:active {
+  background-color: #004a9d; /* Even darker blue on click */
+  transform: scale(0.97); /* Slight compression */
+}
+
+.submitButton:disabled {
+  background-color: #ccc; /* Gray when disabled */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .form {
+    gap: 20px; /* Reduce spacing for smaller screens */
+  }
+
+  .submitButton {
+    font-size: 1.1rem; /* Adjust button size */
+    padding: 15px; /* Adjust padding */
+  }
+}

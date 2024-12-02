@@ -1,0 +1,140 @@
+/* Main container for the homepage */
+.mainContent {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden; /* Prevents overflow from elements */
+  background-color: #000; /* Fallback background color */
+}
+
+/* Image Container for Hero Section */
+.imageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Keep the image behind text */
+}
+
+/* Hero Image */
+.heroImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fully covers the section */
+  z-index: -1; /* Keeps the image behind text */
+}
+
+/* Overlay Text Styling */
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  padding: 20px; /* Add consistent padding for responsiveness */
+  max-width: 90%; /* Limit width for smaller screens */
+  color: #fff; /* Text color */
+}
+
+/* Hero Title */
+.heroTitle {
+  font-size: 3rem; /* Larger text for the hero title */
+  line-height: 1.2;
+  margin-bottom: 1.5rem; /* Add spacing below the title */
+  color: #fff; /* Ensure the title text is visible */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Add subtle shadow for better readability */
+}
+
+/* Hero Subtitle */
+.heroSubtitle {
+  font-size: 1.5rem; /* Adjusted size for readability */
+  margin-bottom: 2rem;
+  color: #ccc; /* Slightly lighter text for subtitle */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow for readability */
+}
+
+/* Quote/Book Button Styling */
+.quoteButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #0070f3; /* Blue for better contrast */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+}
+
+.quoteButton:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.quoteButton:active {
+  transform: scale(0.95); /* Slight compression on click */
+}
+
+/* General Section Styles */
+.section {
+  width: 100%;
+  min-height: 100vh; /* Full viewport height for each section */
+  padding: 60px 40px; /* Add padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* Optional section separator */
+  background-color: #f9f9f9; /* Light background for content sections */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color for headings */
+}
+
+.section p {
+  font-size: 1.2rem;
+  color: #555; /* Softer gray for paragraph text */
+  line-height: 1.6; /* Improve readability */
+  max-width: 800px; /* Limit width for longer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem; /* Smaller subtitle for mobile */
+  }
+
+  .quoteButton {
+    font-size: 0.9rem; /* Smaller button size */
+    padding: 0.6rem 1.2rem;
+  }
+
+  .section {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+}

@@ -1,0 +1,96 @@
+/* Sidebar container */
+.sidebar {
+  width: 220px; /* Adjusted width */
+  background-color: #000; /* Black background */
+  color: white;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  position: fixed; /* Fixed position for consistent layout */
+  overflow-y: auto; /* Enable scrolling for longer content */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure it stays above main content */
+}
+
+/* Navigation links list */
+.sidebarLinks {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Add space between the items */
+  margin-top: 20px; /* Create space at the top of the list */
+}
+
+.navItem {
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background highlight on hover */
+}
+
+.navLink {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+  font-size: 1rem; /* Standard font size */
+  font-weight: 500; /* Slightly bold */
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #0070f3; /* Highlight color on hover */
+}
+
+/* Active link styling */
+.navLink.active {
+  color: #0070f3; /* Highlight active link */
+  font-weight: bold;
+  border-left: 3px solid #0070f3; /* Add a left border for emphasis */
+  padding-left: 10px; /* Create space between the border and the text */
+}
+
+/* Instagram section */
+.instagramSection {
+  margin-top: auto; /* Push the Instagram button to the bottom of the navbar */
+  padding-top: 20px; /* Add some spacing before it */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle divider */
+}
+
+.instagramButton {
+  background-color: #e1306c; /* Instagram pink */
+  color: white;
+  padding: 14px; /* Adjust padding for a larger button */
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%; /* Make the button span the width of the sidebar */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.instagramButton:hover {
+  background-color: #c8235d; /* Darker pink on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* Adjust width for smaller devices */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .navLink {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .instagramButton {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
