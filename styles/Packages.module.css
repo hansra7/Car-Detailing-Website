@@ -1,0 +1,89 @@
+/* Packages Section */
+.packagesSection {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  /* Section Heading */
+  .heading {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  /* Grid Layout */
+  .packagesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Package Card */
+  .packageCard {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .packageCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Package Title */
+  .packageTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Package Duration */
+  .packageDuration {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Package Price */
+  .packagePrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0070f3;
+    margin-top: 5px;
+  }
+  
+  /* Package List */
+  .packageList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .packageList li {
+    font-size: 1rem;
+    color: #444;
+    padding: 5px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .packagesGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .packageCard {
+      padding: 20px;
+    }
+  }
+  

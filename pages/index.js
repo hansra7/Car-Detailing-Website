@@ -2,12 +2,18 @@ import React, { useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/HomePage.module.css';
-import Contact from './Contact';
+import Contact from './contact';
 import Gallery from './gallery';
+import Packages from './packages';
+import Book from './book';
+import About from './about';
 
 const Index = () => {
   const homeSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
+  const packagesSectionRef = useRef(null);
+  const bookSectionRef = useRef(null);
+  const aboutSectionRef = useRef(null);
 
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
@@ -54,11 +60,7 @@ const Index = () => {
         </section>
 
         {/* Contact Section */}
-        <section
-          id="contact"
-          ref={contactSectionRef}
-          className={styles.section}
-        >
+        <section id="contact" ref={contactSectionRef} className={styles.section}>
           <Contact />
         </section>
 
@@ -67,54 +69,19 @@ const Index = () => {
           <Gallery />
         </section>
 
-        {/* Interior Services Section */}
-        <section id="interior-services" className={styles.section}>
-          <h1 className={styles.sectionTitle}>Interior Services</h1>
-
-          {/* Deep Clean Interior Package */}
-          <div id="deep-clean" className={styles.packageSection}>
-            <h2 className={styles.packageTitle}>Deep Clean Interior Package</h2>
-            <p className={styles.packageDetails}>
-              <strong>Duration:</strong> ~8 hours | <strong>Price:</strong>{' '}
-              $200-$350
-            </p>
-            <ul className={styles.description}>
-              <li>Thorough vacuum and steam clean.</li>
-              <li>Condition leather and plastic surfaces.</li>
-              <li>Remove tough stains from carpets and upholstery.</li>
-              <li>Deodorize for a fresh, clean scent.</li>
-            </ul>
-            <div className={styles.imagesContainer}>
-              <div className={styles.imageWrapper}>
-                <h3>Before</h3>
-                <Image
-                  src="/deep-clean-before.jpeg"
-                  alt="Deep Clean Interior Package - Before"
-                  width={400}
-                  height={300}
-                  className={styles.image}
-                  priority
-                />
-              </div>
-              <div className={styles.imageWrapper}>
-                <h3>After</h3>
-                <Image
-                  src="/deep-clean-after.jpeg"
-                  alt="Deep Clean Interior Package - After"
-                  width={400}
-                  height={300}
-                  className={styles.image}
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+        {/* Packages & Pricing Section */}
+        <section id="packages" ref={packagesSectionRef} className={styles.section}>
+          <Packages />
         </section>
 
-        {/* Exterior Services Section */}
-        <section id="exterior-services" className={styles.section}>
-          <h1 className={styles.sectionTitle}>Exterior Services</h1>
-          <p>Detailing, paint correction, and ceramic coating specialists.</p>
+        {/* Book Now Section */}
+        <section id="book" ref={bookSectionRef} className={styles.section}>
+          <Book />
+        </section>
+
+        {/* About Us Section */}
+        <section id="about" ref={aboutSectionRef} className={styles.section}>
+          <About />
         </section>
       </main>
     </>
